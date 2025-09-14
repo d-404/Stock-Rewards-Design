@@ -38,15 +38,13 @@ public class LedgerEntry {
 	public LedgerEntry() {
 	}
 
-	public LedgerEntry(UUID id, UUID userId, String account, BigDecimal amountInr, String type, String referenceId,
-			OffsetDateTime createdAt) {
-		this.id = id;
+	public LedgerEntry(UUID userId, String account, BigDecimal amountInr, String type, String referenceId) {
 		this.userId = userId;
 		this.account = account;
 		this.amountInr = amountInr;
 		this.type = type;
 		this.referenceId = referenceId;
-		this.createdAt = createdAt;
+		this.createdAt = OffsetDateTime.now();
 	}
 
 	public UUID getId() {

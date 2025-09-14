@@ -1,5 +1,6 @@
 package com.stockmarket.dto;
 
-public record RewardResponse() {
+import java.util.UUID;
 
+public record RewardResponse(UUID rewardId, String status) {
 }

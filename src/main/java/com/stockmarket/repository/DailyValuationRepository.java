@@ -5,9 +5,11 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.stockmarket.entity.DailyValuation;
 
-public interface DailyValuationRepositiry extends JpaRepository<DailyValuation, UUID>{
+@Repository
+public interface DailyValuationRepository extends JpaRepository<DailyValuation, UUID>{
 	 Optional<DailyValuation> findByUserIdAndDate(UUID userId, LocalDate date);
 }
